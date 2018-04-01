@@ -40,7 +40,10 @@ done
 # Directory for putting a backups (check on existing)
 DBK="/tmp/backup/"
 if ! [ -d "$DBK" ];then
-   	mkdir "$DBK"
+   	if ! [ -d "/tmp" ];then
+		mkdir "/tmp"
+	fi
+	mkdir "$DBK"
 fi
 
 #Backup
